@@ -18,8 +18,8 @@ class JamaRestData(object):
         self.headers = {"Authorization": "Bearer {}".format(token)}
 
     def pagination_results(self,resource,*query_params):
+        query_string = ''
         if query_params:
-            query_string = ''
             for query in query_params:
                 query_string = query_string + '&' + query
 
